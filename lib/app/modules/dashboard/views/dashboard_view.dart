@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:aku_pengen_mudik_gabawa_laptop/app/data/acara_response.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'dashboard_detail.dart';
+import 'dashboard_detail_view.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});
@@ -76,7 +76,7 @@ class _DashboardViewState extends State<DashboardView> {
                 return GestureDetector(
                   onTap: () {
                     // Navigasi ke halaman detail konser
-                    Get.to(() => ConcertDetailPage(concertId: acara.id!));
+                    Get.to(() => DetailAcaraView(acara: acara));
                   },
                   child: Card(
                     shape: RoundedRectangleBorder(
